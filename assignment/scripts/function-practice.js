@@ -17,7 +17,7 @@ function helloName( name ){
   return name;
 }
 // Remember to call the function to test
-
+console.log('Hello,', helloName('Terry') + '!' );
 
 // 3. Function to add two numbers together & return the result
 function addNumbers( firstNumber, secondNumber ) {
