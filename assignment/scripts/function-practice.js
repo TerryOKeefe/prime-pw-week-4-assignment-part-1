@@ -13,11 +13,11 @@ console.log('Test - should say "Hello World!"', hello());
 
 
 // 2. Function to return an personalized hello, for example 'Hello, Jo!'
-function helloName(name){ // start helloName function
+function helloName( name ){ // start helloName function
   return name;
 } // end helloName
 // Remember to call the function to test
-console.log('Hello,', helloName('Terry') + '!' ); // console log to call function
+console.log( 'Hello,', helloName( 'Terry' ) + '!' ); // console log to call function
 
 // 3. Function to add two numbers together & return the result
 function addNumbers( firstNumber, secondNumber ) { // function to add up 2 numbers
@@ -58,7 +58,7 @@ console.log( 'Is -3 greater than 0?', isPositive(-3));
 
 // 6. Function to return the _last_ item in an array. If the
 //    array is empty, return `undefined`.
-const favSandwich = ['Bread', 'Mayo', 'Mustard', 'Turkey', 'Cheddar', 'Lettuce']; // my favorite sandwich array
+const favSandwich = [ 'Bread', 'Mayo', 'Mustard', 'Turkey', 'Cheddar', 'Lettuce' ]; // my favorite sandwich array
 const favSmell = [];
 console.log('My favorite sandwich consists of:', favSandwich); // console log the entire array
 
@@ -72,9 +72,21 @@ console.log( 'Test - should say undefined:', getLast(favSmell));
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
-function find( value, array ){
+let favDrinks = [ 'water', 'energy drink', 'diet soda', 'seltzer' ]
 
-}
+function find( value, array ){ // start find value of array
+  for (let i = 0; i < array.length; i++) {
+    if ( array[i] === value ){ // find if value is exact match within array
+      return true; // return true if found
+    }
+  }
+  return false; // return false if value not found
+} // end find value
+
+console.log( 'Is water in the array?', find('water', favDrinks));
+console.log( 'Is fizzy pop in the array?', find('fizzy pop', favDrinks));
+
+
 
 // ----------------------
 // Stretch Goals
