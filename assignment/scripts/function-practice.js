@@ -13,49 +13,61 @@ console.log('Test - should say "Hello World!"', hello());
 
 
 // 2. Function to return an personalized hello, for example 'Hello, Jo!'
-function helloName( name ){
+function helloName(name){ // start helloName function
   return name;
-}
+} // end helloName
 // Remember to call the function to test
-console.log('Hello,', helloName('Terry') + '!' );
+console.log('Hello,', helloName('Terry') + '!' ); // console log to call function
 
 // 3. Function to add two numbers together & return the result
-function addNumbers( firstNumber, secondNumber ) {
+function addNumbers( firstNumber, secondNumber ) { // function to add up 2 numbers
   // return firstNumber + secondNumber;
   let answer = firstNumber + secondNumber;
   return answer;
 } // end addNumbers
-console.log( 'Two numbers added together', addNumbers( 10, 35 ) );
+console.log( 'Two numbers added together', addNumbers( 10, 35 ) ); // console log to call function
 
 // 4. Function to multiply three numbers & return the result
-function multiplyThree( num0, num1, num2 ){
+function multiplyThree( num0, num1, num2 ){ // function multiply 3 numbers start
   let answer = num0 * num1 * num2
   return answer;
 } // end multiplyThree
 
-console.log( 'Three numbers muliplied:', multiplyThree( 10, 20, 30) );
+console.log( 'Three numbers muliplied:', multiplyThree( 10, 20, 30) ); // console log to call function
 
 
 // 5. Function that will return true if a number is positive,
 //    or greater than zero, and false otherwise
-function isPositive( number ) {
+function isPositive( number ) { // start function to check if number is greater than 0
   if ( number > 0 ){
-    return;
+    return true;
   }
-    return;
-}
+  else {
+    return false;
+  }
+} // end isPositive function
 // Call the function to test each outcome (true & false)
 // Write a separate console.log statement for each outcome
-console.log( 'isPositive - should say true', isPositive(3) );
-console.log( 'isPositive - should say false', isPositive(0) );
-console.log( 'isPositive - should say false', isPositive(-3) );
+console.log( 'isPositive - should say true', isPositive(3) ); // values given by assignment
+console.log( 'isPositive - should say false', isPositive(0) ); // values given by assignment
+console.log( 'isPositive - should say false', isPositive(-3) ); // values given by assignment
 
+console.log( 'Is 5 a positive number?', isPositive(5)); // separate console.log statements
+console.log( 'Is 0 greater than 0?', isPositive(0)); // not sure if this is what the assignment is asking
+console.log( 'Is -3 greater than 0?', isPositive(-3));
 
 // 6. Function to return the _last_ item in an array. If the
 //    array is empty, return `undefined`.
-function getLast( array ) {
+const favSandwich = ['Bread', 'Mayo', 'Mustard', 'Turkey', 'Cheddar', 'Lettuce']; // my favorite sandwich array
+const favSmell = [];
+console.log('My favorite sandwich consists of:', favSandwich); // console log the entire array
 
-}
+function getLast( array ) { // start getLast item of an array
+  return array[array.length-1];
+} // end getLast item of the array
+
+console.log( 'Test - should say Lettuce:', getLast(favSandwich)); // test to see last item in array
+console.log( 'Test - should say undefined:', getLast(favSmell));
 
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
