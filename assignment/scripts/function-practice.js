@@ -72,7 +72,7 @@ console.log( 'Test - should say undefined:', getLast(favSmell));
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
-let favDrinks = [ 'water', 'energy drink', 'diet soda', 'seltzer' ]
+const favDrinks = [ 'water', 'energy drink', 'diet soda', 'seltzer' ]
 
 function find( value, array ){ // start find value of array
   for (let i = 0; i < array.length; i++) {
@@ -83,9 +83,9 @@ function find( value, array ){ // start find value of array
   return false; // return false if value not found
 } // end find value
 
-console.log( 'Is water in the array?', find('water', favDrinks));
-console.log( 'Is fizzy pop in the array?', find('fizzy pop', favDrinks));
-
+console.log( 'Is water in the array?', find('water', favDrinks)); // find if water value is in the array
+console.log( 'Is fizzy pop in the array?', find('fizzy pop', favDrinks)); // find if fizzy pop is in the array
+console.log( 'Is diet soda in the array?', find('diet soda', favDrinks)); // find another value within the array
 
 
 // ----------------------
