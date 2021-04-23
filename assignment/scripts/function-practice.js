@@ -41,8 +41,7 @@ console.log( 'Three numbers muliplied:', multiplyThree( 10, 20, 30) ); // consol
 function isPositive( number ) { // start function to check if number is greater than 0
   if ( number > 0 ){
     return true;
-  }
-  else {
+  }else {
     return false;
   }
 } // end isPositive function
@@ -60,6 +59,7 @@ console.log( 'Is -3 greater than 0?', isPositive(-3));
 //    array is empty, return `undefined`.
 const favSandwich = [ 'Bread', 'Mayo', 'Mustard', 'Turkey', 'Cheddar', 'Lettuce' ]; // my favorite sandwich array
 const favSmell = [];
+
 console.log('My favorite sandwich consists of:', favSandwich); // console log the entire array
 
 function getLast( array ) { // start getLast item of an array
