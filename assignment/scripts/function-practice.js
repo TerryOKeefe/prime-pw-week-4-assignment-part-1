@@ -53,7 +53,7 @@ console.log( 'isPositive - should say false', isPositive(-3) ); // values given 
 
 console.log( 'Is 5 a positive number?', isPositive(5)); // separate console.log statements
 console.log( 'Is 0 greater than 0?', isPositive(0)); // not sure if this is what the assignment is asking
-console.log( 'Is -3 greater than 0?', isPositive(-3));
+console.log( 'Is -10 greater than 0?', isPositive(-10));
 
 // 6. Function to return the _last_ item in an array. If the
 //    array is empty, return `undefined`.
@@ -94,18 +94,32 @@ console.log( 'Is diet soda in the array?', find('diet soda', favDrinks)); // fin
 // 8. Function to check if a letter is the first letter in a
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
-
+  if (letter === string.charAt(0)) {
+    return true;
+  }
+  return false;
 }
-console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
-console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
+console.log( 'isFirstLetter - should say true:', isFirstLetter('a', 'apple') );
+console.log( 'isFirstLetter - should say false:', isFirstLetter('z', 'apple') );
+console.log( 'isFirstLetter - should say true:', isFirstLetter('b', 'banana') );
+console.log( 'isFirstLetter - should say false:', isFirstLetter('f', 'phone') );
 
 // 9. Function to return the sum of all numbers in an array
-function sumAll( ) {
+let myNumbers = [];
+
+function sumAll( num0, num1, amount ) {
   let sum = 0
+
   // TODO: loop to add items
+  myNumbers.push( num0 );
+  myNumbers.push( num1 );
+  for (let i = 0; i < amount.length; i++) {
+    sum += amount[i];
+  }
   return sum;
 }
 
+console.log( 'Test - Add 10,30 to array and return sum:', sumAll( 10, 30, myNumbers));
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
