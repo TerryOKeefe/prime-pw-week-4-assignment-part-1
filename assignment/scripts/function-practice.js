@@ -120,11 +120,29 @@ function sumAll( num0, num1, amount ) {
 }
 
 console.log( 'Test - Add 10,30 to array and return sum:', sumAll( 10, 30, myNumbers));
+
+
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
 
+let numbers = [];
 
+function posNum( array ) {
+  for (let i = 0; i < 3; i++) {
+    let randomNum =  Math.round(Math.random()) * 2 - 1;
+    array.push(randomNum);
+
+    if (array[i] > 0) {
+      return true;
+    } else if (array == null) {
+      let array = [];
+      return false;
+    }
+  }
+}
+
+console.log( 'Random numbers Positive:', posNum(numbers));
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
