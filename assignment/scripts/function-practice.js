@@ -93,8 +93,8 @@ console.log( 'Is diet soda in the array?', find('diet soda', favDrinks)); // fin
 // ----------------------
 // 8. Function to check if a letter is the first letter in a
 //    string. Return true if it is, and false otherwise
-function isFirstLetter(letter, string) {
-  if (letter === string.charAt(0)) {
+function isFirstLetter(letter, string) { // start function to check character w/in string
+  if (letter === string.charAt(0)) { // exact match at index[0]
     return true;
   }
   return false;
@@ -107,17 +107,17 @@ console.log( 'isFirstLetter - should say false:', isFirstLetter('f', 'phone') );
 // 9. Function to return the sum of all numbers in an array
 let myNumbers = [];
 
-function sumAll( num0, num1, amount ) {
+function sumAll( num0, num1, amount ) { // function to return sum of all numbers in array
   let sum = 0
 
   // TODO: loop to add items
-  myNumbers.push( num0 );
-  myNumbers.push( num1 );
-  for (let i = 0; i < amount.length; i++) {
+  myNumbers.push( num0 ); // push num0 into array
+  myNumbers.push( num1 ); // push num1 into array
+  for (let i = 0; i < amount.length; i++) { // loop to add items
     sum += amount[i];
   }
   return sum;
-}
+} // return sum of added numbers to array.
 
 console.log( 'Test - Add 10,30 to array and return sum:', sumAll( 10, 30, myNumbers));
 
@@ -126,24 +126,45 @@ console.log( 'Test - Add 10,30 to array and return sum:', sumAll( 10, 30, myNumb
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
 
-let numbers = [];
 
-function posNum( array ) {
-  for (let i = 0; i < 3; i++) {
-    let randomNum =  Math.round(Math.random()) * 2 - 1;
-    array.push(randomNum);
 
-    if (array[i] > 0) {
-      return true;
-    } else if (array == null) {
-      let array = [];
-      return false;
+function posNum( num0, num1, num2, array ) {
+  let newArr = []; // create new array within function
+  newArr.push(num0); // add num0 to new array
+  newArr.push(num1); // add num1 to new array
+  newArr.push(num2); // add num2 to new array
+
+  for (let i = 0; i < newArr.length; i++) { // loop to check values
+    console.log(newArr);
+    if (newArr[i] > 0) {
+      return true; // check positive values to return true
+    } else if (newArr[i] < 0) {
+      let newArr = [];
+      return newArr[i]; // check negative values to return false and empty array
     }
   }
 }
 
-console.log( 'Random numbers Positive:', posNum(numbers));
+console.log( 'Positive numbers - should return true:', posNum(1, 2, 3));
+console.log( 'Negative numbers - should return undefined:', posNum(-1, -2, -3),);
+// not really sure if this is what the stretch goal is asking but wanted to give it a try
+
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
 //     here in a comment, write the function, and test it!
+
+// Quick easy function to practice with and was the first one I saw on Edabit.
+// Function to get first value just like #8 but returns the value instead of checking.
+// Create function to run array through a loop
+// Function runs loop and returns value at index [0]
+
+function getFirstValue(arr) { // start getFirstValue function
+	for (let i = 0; i < arr.length; i++) {
+		return arr[0]; // return value at first index of array.
+	}
+} // end getFirstValue
+
+console.log( 'Test -  Should be 1:', getFirstValue( [1, 2, 3]) );
+console.log( 'Test - Should be 80:', getFirstValue( [80, 5, 100]) );
+console.log( 'Test - Should be -500:', getFirstValue([-500, 0, 50]) );
